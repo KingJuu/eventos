@@ -3,6 +3,9 @@
     margin: 0;
 }
 
+html{
+    width: 100%;
+}
 body{
     font-size: 1em;
 }
@@ -23,9 +26,50 @@ header{
     margin: 0px;
   
 }
+#intro{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+#intro h1 {
+    font-size: 60px;
+}
+#intro h2 {
+    color:#d9d9d9;
+}
+
+
 header img{
     padding-left: 30px;
+    width: 250px;
 }
+@media screen and (max-width: 757px) {
+    header img{
+        padding-left: 10px;
+        width: 150px;
+    }
+    #intro h1 {
+        font-size: 40px;
+    }
+    #intro h2 {
+        font-size: 20px;
+    }
+    #intro{
+        margin-left: 20px;
+       
+    }
+}
+
+#main{
+    padding: 50px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+
+}
+
 nav{
     display: flex;
     flex-direction: row;
@@ -33,12 +77,12 @@ nav{
     padding: 20px;
     height: 50px;
 }
-
 .nav-bar{
     margin:10px;
     padding: 5px;
     border: 0.2em solid #ffffff;
 }
+
 .nav-bar:hover{
     border-bottom:0.2em solid #1dd3b0; 
     transition: all 0.1s;   
@@ -81,10 +125,34 @@ nav{
     border-radius: 0.3em;
 }
 
+@media screen and (max-width:1024px) {
+    .nav-bar{
+        display: none;
+    }
+
+    #img-inicio{
+        display: none;
+    }
+    
+    #main{
+        padding: 50px;
+        padding-left: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;    
+    }
+    nav{
+        padding: 0px;
+    }
+    
+}
+
+
+
 #section-1{
     background-color: #086375;
     width: 100%;
-    min-height: fit-content;
+    max-height: fit-content;
     margin:0px;
     color:#ffffff;
     padding: 50px 0px;
@@ -92,28 +160,6 @@ nav{
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
-}
-
-#intro{
-    margin-left: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-#intro h1 {
-    font-size: 60px;
-}
-#intro h2 {
-    color:#d9d9d9;
-}
-
-#main{
-    padding: 50px;
-    padding-left: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-
 }
 
 .evento{
@@ -139,6 +185,15 @@ nav{
     margin-top: 20px ;
 
     max-width: 1000px;
+}
+
+@media screen and (max-width: 757px){
+ .evento{
+    margin: 30px;
+ }
+ body{
+    font-size: 0.9em;
+ }
 }
 
 video{
@@ -230,6 +285,12 @@ footer img {
     background-color: #fff;
     }
 
+    @media screen and (max-width: 757px){
+        .top-bar { 
+        color: #ffffff;
+        display: block; 
+        }
+    }
 a{
     color: black;
     text-decoration: none;
